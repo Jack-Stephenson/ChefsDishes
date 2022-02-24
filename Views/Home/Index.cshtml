@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<ul>
+    @{
+        foreach (Chef c in ViewBag.AllChefs)
+        {
+            <li>@c.FirstName @c.LastName | @c.Dishes.Count()</li>
+        }
+    }
+    <button><a href="MakeChef">Add a Chef!</a></button>
+</ul>

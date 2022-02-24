@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<ul>
+    @{
+        foreach (Dish d in ViewBag.AllDishes)
+        {
+            <li>@d.Name | @d.Chef.FirstName @d.Chef.LastName | @d.Tastiness | @d.Calories</li>
+        }
+    }
+    <button><a href="MakeDish">Add a Dish!</a></button>
+</ul>
